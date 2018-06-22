@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Set the viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+  <!-- Set character encoding -->
+  <meta charset="utf-8">
+
+  <!-- Set title -->
+  <title>My first Progressive Web Application</title>
+
+  <!-- Request fonts and styles -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#db5945">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/icon-192x192.png">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+  <h1>My first Progressive Web Application</h1>
+
+  <img src="images/PWA-logo.png" alt="PWA Logo">
+
+    <h2>Introduction</h2>
+
+    <ul>
+      <li>PWA is not an API or technology, its a web development approach.</li>
+      <li>Progressively enhance web apps to look and feel like native apps.</li>
+      <li>It is not like responsive design to look good on both mobile and web.</li>
+      <li>PWA app <ul><li>should be reliable (load fast even when you are offline),</li>
+        <li>should be fast (respond to user actions)</li>
+        <li>should be engaging (by using push notification)</li></ul></li>
+      <li>It works when you dont have internet connection leveraging data cached during your last interaction with your app.</li>
+    </ul>
+
+    <!-- Links to blog post pages -->
+    <ul id="post-list">
+
+      <li>
+        <a href="pages/pwa1.html" class="post-link">Why PWA?</a>
+      </li>
+
+      <li>
+        <a href="pages/pwa2.html" class="post-link">What are PWA's</a>
+      </li>
+
+      <li>
+        <a href="pages/pwa3.html" class="post-link">Who all using PWA</a>
+      </li>
+
+      <li>
+        <a href="pages/pwa4.html" class="post-link">Browser Support</a>
+      </li>
+
+      <li>
+        <a href="pages/pwa5.html" class="post-link">Key features</a>
+      </li>
+
+      <li>
+        <a href="pages/pwa6.html" class="post-link">When not to use PWA</a>
+      </li>
+
+    </ul>
+
+<script>
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+            .then(function(registration) {
+                console.log('SW registered');
+            })
+            .catch(function(err) {
+                console.log('SW registration failed: ', err);
+            });
+    }
+
+</script>
+
+</body>
+</html>
